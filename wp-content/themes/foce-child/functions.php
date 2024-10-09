@@ -5,8 +5,8 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
     // CHARGER LE STYLE ET LE SCRIPT DU THÈME ENFANT
-    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/assets/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/theme.css'));
-    wp_enqueue_script('theme-script', get_stylesheet_directory_uri() . '/assets/js/script.js', array(), false, true);
+    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/install-sass/assets/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/install-sass/assets/css/theme.css'));
+    wp_enqueue_script('theme-script', get_stylesheet_directory_uri() . '/script.js', array(), false, true);
 }
 
 // GET CUSTOMIZER OPTIONS FORM PARENT THEME
