@@ -1,0 +1,97 @@
+/*ANIMATION SECTION */
+
+ /* Animation de montée (fade-in vers le haut) */
+ @keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px); /* Commence en bas */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Arrive à la position normale */
+  }
+}
+
+/* Animation de descente (fade-in vers le bas) */
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(200px); /* Commence en haut */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Arrive à la position normale */
+  }
+}
+
+.section {
+  opacity: 0; 
+  transform: translateY(200px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Classe pour activer l'animation de montée */
+.section-visible-up {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Classe pour activer l'animation de descente */
+.section-visible-down {
+  animation: fade-in-down 1s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* FIN DANIMATION SECTION */ 
+
+
+/* ROTATION DE FLEUR */
+.story__article::after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+
+  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+/* fin rotation 
+
+/*ANIMATION LOGO */
+/* Styles de base pour les titres avant l'animation */
+ .animation-titre {
+  opacity: 0; 
+  transform: translateY(150px);
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+} 
+
+/* Lorsque l'élément est visible dans le viewport */
+.animation-titre.visible {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
