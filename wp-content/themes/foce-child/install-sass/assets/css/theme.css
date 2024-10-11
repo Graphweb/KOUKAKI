@@ -1,5 +1,5 @@
+@charset "UTF-8";
 /* ANIMATION SECTION */
-
 /* Animation de montée (fade-in vers le haut) */
 @keyframes fade-in-up {
   0% {
@@ -11,7 +11,6 @@
     transform: translateY(0); /* Arrive à la position normale */
   }
 }
-
 /* Animation de descente (fade-in vers le bas) */
 @keyframes fade-in-down {
   0% {
@@ -23,36 +22,31 @@
     transform: translateY(0); /* Arrive à la position normale */
   }
 }
-
 .section {
   opacity: 0;
   transform: translateY(200px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-
-  &.section-visible-up {
-    animation: fade-in-up 1s ease-out forwards;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  &.section-visible-down {
-    animation: fade-in-down 1s ease-out forwards;
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
-
+.section.section-visible-up {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+.section.section-visible-down {
+  animation: fade-in-down 1s ease-out forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ANIMATION LOGO */
 .animation-titre {
   opacity: 0;
   transform: translateY(150px);
   transition: opacity 0.8s ease-out, transform 1s ease-out;
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+.animation-titre.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /**************** ANIMATION FLEUR ORANGE **************/
@@ -62,7 +56,6 @@
   align-items: center;
   text-align: center;
   font-size: 15px;
-  
   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
   animation: rotate 20s linear infinite;
 }
@@ -75,17 +68,15 @@
     transform: rotate(360deg);
   }
 }
-
-
 /**************** ANIMATION FLEUR BLANCHE **************/
 .story h2::after {
-    position: absolute;
-    left: 0.7em;
-    top: 6em;
-
+  position: absolute;
+  left: 0.7em;
+  top: 6em;
   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
   animation: rotate 20s linear infinite;
 }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -94,75 +85,73 @@
     transform: rotate(360deg);
   }
 }
-
 /**************** ANIMATION FLEUR MAUVE **************/
 #studio h2::before {
   position: absolute;
   left: -1em;
   top: 0;
-
-   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
-   animation: rotate 20s linear infinite;
-  }
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  /**************** ANIMATION PETITE FLEUR ORANGÉ **************/
-  #studio h2::after {
-    position: absolute;
-    right: 1em;
-    top: 1.2em;
-
-     /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
-   animation: rotate 20s linear infinite;
-  }
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
+  animation: rotate 20s linear infinite;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**************** ANIMATION PETITE FLEUR ORANGÉ **************/
+#studio h2::after {
+  position: absolute;
+  right: 1em;
+  top: 1.2em;
+  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /**************** ANIMATION FLEUR BLANCHE FOOTER **************/
 .site-footer::before {
   position: absolute;
   left: 4em;
   top: 0em;
-
-   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
-   animation: rotate 20s linear infinite;
-  }
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
+  animation: rotate 20s linear infinite;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /**************** ANIMATION FLEUR MAUVE FOOTER **************/
 .site-footer::after {
   position: absolute;
   right: -4em;
   bottom: 7.8em;
-
-   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
-   animation: rotate 20s linear infinite;
-  }
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
+  animation: rotate 20s linear infinite;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */
