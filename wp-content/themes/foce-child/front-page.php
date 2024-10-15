@@ -65,16 +65,7 @@ get_header();
                 <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
             </div>
             </section>
-                    <!-- /* NOUVELLE SECTION NOMINATION */ -->
-            <section class="nomination">
-                <div class="nomination__oscars">
-                    <img src="wp-content\themes\foce-child\images\Rectangle 23.png"
-                    alt="fond du titre des nominations">
-                        <h3>Fleurs d’oranger & chats errants est nominé aux Oscars Short Film Animated de 2022 !</h3>
-                </div>
-                    <img class="nomination__logo" src="wp-content\themes\foce-child\images\18-courts-metrages-francais-d-animation-eligibles-aux-oscars-2021 1.png"
-                     alt="Nomination aux Oscars 2022">
-            </section>
+            <?php get_template_part( 'template-part/nomination' ); ?>    
        
 
     </main><!-- #main -->

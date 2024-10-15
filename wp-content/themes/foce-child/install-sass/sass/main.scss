@@ -171,30 +171,30 @@
 
 /******** NOUVELLE SECTION ************/
 .nomination {
-  position: relative;
-  padding: 150px 0 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px 0;
-  justify-content: center;
-  align-items: center;
-}
-
-.nomination__oscars {
-  position: relative;
-}
-
-.nomination__oscars img {
-  height: 100%;
-}
-
-.nomination__oscars h3 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  line-height: 3.2rem;
-  text-align: left;
-  font-size: 38px;
-}
-
+    position: relative;
+    padding: 150px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0;
+    justify-content: center;
+    align-items: center;
+  
+    &__oscars {
+      position: relative;
+  
+      img {
+        height: 100%;
+      }
+  
+      h3 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: 3.2rem;
+        text-align: left;
+        font-size: 38px;
+      }
+    }
+  }
+  
 
