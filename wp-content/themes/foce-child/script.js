@@ -49,6 +49,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* fin */
 
+/********************** ANIMATION TITRES  ************/
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll(".section-titre");
+
+  // Vérifier si un élément est visible dans le viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight && rect.bottom > 0
+    );
+  }
+
+  // Vérifier la visibilité de chaque titre et appliquer l'animation
+  function checkVisibility() {
+    titles.forEach(title => {
+      if (isInViewport(title)) {
+        title.classList.add("titre-visible");
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility); // Vérifier au chargement initial
+});
 
 
 

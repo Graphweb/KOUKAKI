@@ -66,7 +66,6 @@
   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
   animation: rotate 20s linear infinite;
 }
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -82,8 +81,6 @@
     position: absolute;
     left: 0.7em;
     top: 6em;
-
-  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
   animation: rotate 20s linear infinite;
 }
 @keyframes rotate {
@@ -100,8 +97,6 @@
   position: absolute;
   left: -1em;
   top: 0;
-
-   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
    animation: rotate 20s linear infinite;
   }
   @keyframes rotate {
@@ -118,8 +113,6 @@
     position: absolute;
     right: 1em;
     top: 1.2em;
-
-     /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
    animation: rotate 20s linear infinite;
   }
   @keyframes rotate {
@@ -136,8 +129,6 @@
   position: absolute;
   left: 4em;
   top: 0em;
-
-   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
    animation: rotate 20s linear infinite;
   }
   @keyframes rotate {
@@ -154,8 +145,6 @@
   position: absolute;
   right: -4em;
   bottom: 7.8em;
-
-   /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
    animation: rotate 20s linear infinite;
   }
   @keyframes rotate {
@@ -166,3 +155,46 @@
       transform: rotate(360deg);
     }
 }
+
+/*********** ANIMATION TITRE ***************/
+.section-titre{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 1s ease-out;
+
+  &.titre-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/******** NOUVELLE SECTION ************/
+.nomination {
+  position: relative;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.nomination__oscars {
+  position: relative;
+}
+
+.nomination__oscars img {
+  height: 100%;
+}
+
+.nomination__oscars h3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 3.2rem;
+  text-align: left;
+  font-size: 38px;
+}
+
+
