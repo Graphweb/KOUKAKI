@@ -1,5 +1,5 @@
         <!-- /* NOUVELLE SECTION NOMINATION */ -->
-        <section class="nomination">
+        <section class=" section nomination">
                 <div class="nomination__oscars">
                     <img src="wp-content\themes\foce-child\images\Rectangle 23.png"
                     alt="fond du titre des nominations">

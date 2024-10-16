@@ -1,22 +1,35 @@
-/* ANIMATION DES SECTION */
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
+  // Configuration de l'observer
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
 
-  sections.forEach((section, index) => {
-    if (section.classList.contains('banner')) {
-      // Animation de montée pour la section .banner
-      section.classList.add("section-visible-up");
-    } else {
-      // Animation de descente pour les autres sections
-      setTimeout(() => {
-        section.classList.add("section-visible-down");
-      }, index * 500); // Délai de 500ms entre chaque section pour un effet fluide
-    }
+  // Création de l'observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const element = entry.target;
+
+      if (entry.isIntersecting) {
+        // Vérification de la direction de l'entrée dans la fenêtre
+        if (entry.boundingClientRect.top < 0) {
+          element.classList.add('section-visible-down');
+        } else {
+          element.classList.add('section-visible-up');
+        }
+        // Optionnel : une fois l'animation déclenchée, on peut arrêter d'observer l'élément
+        observer.unobserve(element);
+      }
+    });
+  }, options);
+  
+  // Sélection des éléments à observer
+  const nominations = document.querySelectorAll('.section .nomination');
+  nominations.forEach(nomination => {
+    observer.observe(nomination);
   });
-
-  console.log("Les sections s'affichent progressivement !");
 });
-/* FIN ANIMATION SECTION */
 
 
 

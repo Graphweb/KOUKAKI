@@ -1,10 +1,17 @@
 @charset "UTF-8";
 /* ANIMATION SECTION */
 /* Animation de montée (fade-in vers le haut) */
+.section .nomination.section-visible-up {
+  animation: fade-in-up 2s ease-out forwards;
+}
+.section .nomination.section-visible-down {
+  animation: fade-in-down 2s ease-out forwards;
+}
+
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(-200px); /* Commence en bas */
+    transform: translateY(200px); /* Commence en bas */
   }
   100% {
     opacity: 1;
@@ -15,29 +22,13 @@
 @keyframes fade-in-down {
   0% {
     opacity: 0;
-    transform: translateY(200px); /* Commence en haut */
+    transform: translateY(-200px); /* Commence en haut */
   }
   100% {
     opacity: 1;
     transform: translateY(0); /* Arrive à la position normale */
   }
 }
-.section {
-  opacity: 0;
-  transform: translateY(200px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.section.section-visible-up {
-  animation: fade-in-up 1s ease-out forwards;
-  opacity: 1;
-  transform: translateY(0);
-}
-.section.section-visible-down {
-  animation: fade-in-down 1s ease-out forwards;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ANIMATION LOGO */
 .animation-titre {
   opacity: 0;
@@ -49,58 +40,42 @@
   transform: translateY(0);
 }
 
-/**************** ANIMATION FLEUR ORANGE **************/
+/**************** ANIMATION FLEUR **************/
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .story__article::after {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   font-size: 15px;
-  /* AJOUT DE L'ANIMATION DE ROTATION DE FLEUR */
+  position: absolute;
   animation: rotate 20s linear infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/**************** ANIMATION FLEUR BLANCHE **************/
 .story h2::after {
   position: absolute;
-  left: 0.7em;
+  left: -7.4em;
   top: 6em;
   animation: rotate 20s linear infinite;
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.story h2::before {
+  position: absolute;
+  left: -8em;
 }
-/**************** ANIMATION FLEUR MAUVE **************/
+
 #studio h2::before {
   position: absolute;
   left: -1em;
   top: 0;
   animation: rotate 20s linear infinite;
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/**************** ANIMATION PETITE FLEUR ORANGÉ **************/
 #studio h2::after {
   position: absolute;
   right: 1em;
@@ -108,31 +83,12 @@
   animation: rotate 20s linear infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/**************** ANIMATION FLEUR BLANCHE FOOTER **************/
 .site-footer::before {
   position: absolute;
   left: 4em;
   top: 0em;
   animation: rotate 20s linear infinite;
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/**************** ANIMATION FLEUR MAUVE FOOTER **************/
 .site-footer::after {
   position: absolute;
   right: -4em;
@@ -140,14 +96,6 @@
   animation: rotate 20s linear infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /*********** ANIMATION TITRE ***************/
 .section-titre {
   opacity: 0;
@@ -169,15 +117,12 @@
   justify-content: center;
   align-items: center;
 }
-
 .nomination__oscars {
   position: relative;
 }
-
 .nomination__oscars img {
   height: 100%;
 }
-
 .nomination__oscars h3 {
   position: absolute;
   top: 50%;
@@ -186,7 +131,5 @@
   text-align: left;
   font-size: 38px;
 }
-
-
 
 /*# sourceMappingURL=theme.css.map */
