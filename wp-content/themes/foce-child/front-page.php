@@ -4,9 +4,16 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner section">
-            <img class="animation-titre" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-        </section>
+         <!-- Add Video & banner background -->
+    <section class="banner">
+        <img class="banner__background" src="/images/banner.png" alt="">
+        <video class="banner__video" width="1440" autoplay="autoplay" muted="" loop="infinite">
+            <source src="https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/DWP+IW_P9+Studio+d'animation/Studio+Koukaki-vide%CC%81o+header+sans+son+(1).mp4"
+            type="video/mp4">
+        </video>
+    <img class="banner__logo" src="<?php echo get_theme_file_uri() . '/images/logo.png'; ?>"
+      alt="Logo fleurs d'oranger & chats errants">
+    </section>
         <section id="#story" class="story section">
             <h2 class="section-titre">L'histoire</h2>
             <article id="" class="story__article">

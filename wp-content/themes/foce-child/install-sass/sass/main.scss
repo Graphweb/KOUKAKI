@@ -1,24 +1,29 @@
 /* ANIMATION SECTION */
 
-/* Animation de montée (fade-in vers le haut) */
-
-.section .nomination {
-  &.section-visible-up {
-    animation: fade-in-up 2s ease-out forwards;
-  }
-
-  &.section-visible-down {
-    animation: fade-in-down 2s ease-out forwards;
-  }
+/* Réinitialisation de l'état initial */
+.section {
+  opacity: 0; /* Masqué par défaut */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+
+/* Pour les titres de section */
+.section-titre {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/************ ANIMATIONS ************/
+
+/* Animation de montée (fade-in vers le haut) */
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(200px); /* Commence en bas */
+    transform: translateY(200px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Arrive à la position normale */
+    transform: translateY(0);
   }
 }
 
@@ -26,28 +31,41 @@
 @keyframes fade-in-down {
   0% {
     opacity: 0;
-    transform: translateY(-200px); /* Commence en haut */
+    transform: translateY(-200px);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0); /* Arrive à la position normale */
-  }
-}
-
-
-/* ANIMATION LOGO */
-.animation-titre {
-  opacity: 0;
-  transform: translateY(150px);
-  transition: opacity 0.8s ease-out, transform 1s ease-out;
-
-  &.visible {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/**************** ANIMATION FLEUR **************/
+/* Application d'animation via des classes */
+.section-visible-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.section-visible-down {
+  animation: fade-in-down 0.8s ease-out forwards;
+}
+
+.titre-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ANIMATION  DES TITRES */
+.section-titre {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 1s ease-out;
+
+  &.titre-visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animation de rotation */
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -56,106 +74,147 @@
     transform: rotate(360deg);
   }
 }
-.story__article {
-  &::after {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-    position: absolute;
-    animation: rotate 20s linear infinite;
-  }
+
+/************** Application de l'animation de rotation ****************/
+.story__article::after,
+.story h2::after,
+#studio h2::before,
+#studio h2::after,
+.site-footer::before,
+.site-footer::after {
+  position: absolute;
+  animation: rotate 20s linear infinite;
 }
 
-.story {
-  h2 {
-    &::after {
-      position: absolute;
-      left: -7.4em;
-      top: 6em;
-      animation: rotate 20s linear infinite;
-    }
-    &::before {
-      position: absolute;
-      left: -8em;
-      
-    }
-  }
+/* Positionnements spécifiques */
+.story h2::after {
+  left: -7.4em;
+  top: 6em;
 }
 
-#studio {
-  h2 {
-    &::before {
-      position: absolute;
-      left: -1em;
-      top: 0;
-      animation: rotate 20s linear infinite;
-    }
-    &::after {
-      position: absolute;
-      right: 1em;
-      top: 1.2em;
-      animation: rotate 20s linear infinite;
-    }
-  }
+.story h2::before {
+  left: -8em;
 }
 
-.site-footer {
-  &::before {
-    position: absolute;
-    left: 4em;
-    top: 0em;
-    animation: rotate 20s linear infinite;
-  }
-  &::after {
-    position: absolute;
-    right: -4em;
-    bottom: 7.8em;
-    animation: rotate 20s linear infinite;
-  }
+#studio h2::before {
+  left: -1em;
+  top: 0;
 }
 
-
-/*********** ANIMATION TITRE ***************/
-.section-titre{
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 3s ease-out, transform 1s ease-out;
-
-  &.titre-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#studio h2::after {
+  right: 1em;
+  top: 1.2em;
 }
 
+.site-footer::before {
+  left: 4em;
+  top: 0em;
+}
 
-/******** NOUVELLE SECTION ************/
+.site-footer::after {
+  right: -4em;
+  bottom: 7.8em;
+}
+/******************** NOUVELLE SECTION *******************/
 .nomination {
-    position: relative;
-    padding: 150px 0 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px 0;
-    justify-content: center;
-    align-items: center;
-  
-    &__oscars {
-      position: relative;
-  
-      img {
-        height: 100%;
-      }
-  
-      h3 {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        line-height: 3.2rem;
-        text-align: left;
-        font-size: 38px;
-      }
-    }
+  position: relative;
+  padding: 150px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.nominationoscars {
+  position: relative;
+}
+
+.nominationoscars img {
+  height: 100%;
+}
+
+.nomination__oscars h3 {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  line-height: 3.2rem;
+  text-align: left;
+  font-size: 38px;
+}
+
+/************ BANNER ET MEDIA QUERIES *************/
+
+/* Réglages de la bannière */
+.banner {
+  position: relative;
+  height: 800px;
+}
+
+.banner__background {
+  z-index: -2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 1440px;
+  opacity: 1;
+}
+
+.banner__video {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 1440px;
+  opacity: 1;
+}
+
+/* Flottaison du logo */
+.banner__logo {
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+}
+
+/************ MEDIA QUERIES ************/
+
+@media screen and (max-width: 768px) {
+  .banner__video {
+    display: none;
   }
-  
+  .banner__background {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    height: 600px;
+  }
+  .banner__background {
+    min-width: 1200px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .banner {
+    height: 400px;
+  }
+  .banner__background {
+    min-width: 900px;
+    opacity: 1;
+  }
+  .nomination__oscars h3 {
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    line-height: 3.2rem;
+    text-align: left;
+    font-size: 28px;
+}
+}
+
 
