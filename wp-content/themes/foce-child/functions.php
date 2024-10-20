@@ -7,6 +7,7 @@ function theme_enqueue_styles() {
     // CHARGER LE STYLE ET LE SCRIPT DU THÈME ENFANT
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/install-sass/assets/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/install-sass/assets/css/theme.css'));
     wp_enqueue_script('theme-script', get_stylesheet_directory_uri() . '/script.js', array(), false, true);
+    // Enqueue swiper-bundle.min.css file
 }
 
 // GET CUSTOMIZER OPTIONS FORM PARENT THEME

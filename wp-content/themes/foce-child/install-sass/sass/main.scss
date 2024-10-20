@@ -176,6 +176,65 @@
   z-index: 10;
   animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
 }
+.move-up {
+  animation: move-up 2s 300ms both;
+}
+
+/*Opacity Move -down*/
+@keyframes move-down {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/* Opacity move-up */
+@keyframes move-up {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Float elements */
+@keyframes float {
+  0% {
+    transform: translate3d(6px,6px,0);
+  }
+  12% {
+    transform: translate3d(0px,6px,0);
+  }
+  24% {
+    transform: translate3d(6px,-4px,0);
+  }
+  36% {
+    transform: translate3d(6px,0px,0);
+  }
+  48% {
+    transform: translate3d(-4px,-6px,0);
+  }
+  60% {
+    transform: translate3d(0px,-4px,0);
+  }
+  72% {
+    transform: translate3d(-8px,6px,0);
+  }
+  84% {
+    transform: translate3d(-4px,0px,0);
+  }
+  100% {
+    transform: translate3d(6px,6px,0);
+  }
+}
+
 
 /************ MEDIA QUERIES ************/
 
@@ -216,5 +275,3 @@
     font-size: 28px;
 }
 }
-
-

@@ -19,6 +19,7 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
+            <!-- ici -->
             <?php
             $args = array(
                 'post_type' => 'characters',
@@ -55,6 +56,7 @@ get_header();
                     ?>
                 </div>
             </article>
+            <!-- juska la -->
             <article id="place">
                 <div>
                     <h3 class="section-titre">Le Lieu</h3>
