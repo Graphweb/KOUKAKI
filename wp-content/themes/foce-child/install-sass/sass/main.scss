@@ -19,7 +19,7 @@
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(-200px);
   }
   100% {
     opacity: 1;
@@ -31,7 +31,7 @@
 @keyframes fade-in-down {
   0% {
     opacity: 0;
-    transform: translateY(-200px);
+    transform: translateY(200px);
   }
   100% {
     opacity: 1;
@@ -275,3 +275,26 @@
     font-size: 28px;
 }
 }
+
+
+swiper-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+swiper-slide img {
+  display: block;
+  width:100%;
+}
+

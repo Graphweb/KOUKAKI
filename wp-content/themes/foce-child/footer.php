@@ -20,13 +20,9 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
- <!-- Lien vers le fichier JavaScript 
-      Lien vers le fichier CSS de Swiper 
-            <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-      Script JavaScript de Swiper 
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-!-->
+<?php wp_footer(); ?>   
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    
 
 </body>
 </html>
