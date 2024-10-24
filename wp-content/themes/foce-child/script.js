@@ -1,4 +1,4 @@
-/* ANIMATION DES SECTION */
+/***************************** ANIMATION DES SECTION **************************/
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Les sections s'affichent progressivement !");
 });
 
-/* ANIMATION DES TITRES */
+/************************** ANIMATION DES TITRES *******************************/
 document.addEventListener("DOMContentLoaded", () => {
   const titles = document.querySelectorAll(".section-titre");
 
@@ -38,28 +38,28 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('load', checkVisibility); // Vérifier au chargement initial
 });
 
+/******************** ANIMATION DES NUAGES **************/
+document.addEventListener("DOMContentLoaded", () => {
+  // Sélectionner les nuages
+  const bigCloud = document.querySelector('.place--big_cloud');
+  const littleCloud = document.querySelector('.place--little_cloud');
 
-// Ajouter le script JavaScript pour initialiser SwiperJS///
+  // Fonction qui ajuste la position des nuages en fonction du scroll
+  function moveClouds() {
+    // Obtenir la position de défilement actuelle
+    const scrollPosition = window.scrollY;
 
+    // Calculer les nouveaux déplacements des nuages basés sur le scroll (maximum 300px vers la gauche)
+    const moveBigCloud = Math.min(scrollPosition * 0.3, 300 );  
+    const moveLittleCloud = Math.min(scrollPosition * 0.5,300 ); 
 
-   new Swiper('.swiper-container', {
-     direction: 'horizontal',
-     slidesPerView: 3,
-     spaceBetween: 30,
-    loop: true,
-     navigation: {
-       nextEl: '.swiper-button-next',
-       prevEl: '.swiper-button-prev',
-     },
-     pagination: {
-       el: '.swiper-pagination',
-       clickable: true,
-     },
-     autoplay: {
-       delay: 3000,
-       disableOnInteraction: false,
-     },
-   });
+    // Appliquer la transformation pour déplacer les nuages
+    bigCloud.style.transform = `translateX(-${moveBigCloud}px)`;
+    littleCloud.style.transform = `translateX(-${moveLittleCloud}px)`;
+  }
 
-
-
+  // Attacher la fonction au scroll de la fenêtre
+  window.addEventListener('scroll', moveClouds);
+});
+/********************************/
+ 

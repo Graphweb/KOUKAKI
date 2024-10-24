@@ -21,7 +21,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>   
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     
 
 </body>
