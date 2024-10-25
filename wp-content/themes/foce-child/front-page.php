@@ -20,6 +20,7 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
+            
              <!-- 'Characters' déplacé dans template-part slider.php -->
                 <?php get_template_part ( 'template-part/slider' ); ?>
             <article id="place">

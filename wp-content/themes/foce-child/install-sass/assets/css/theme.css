@@ -73,12 +73,12 @@
 
 /* Positionnements spécifiques */
 .story h2::after {
-  left: -7.4em;
+  left: -6.2em;
   top: 6em;
 }
 
 .story h2::before {
-  left: -8em;
+  left: -7em;
 }
 
 #studio h2::before {
@@ -226,10 +226,10 @@
     transform: translate3d(6px, 6px, 0);
   }
 }
-/********* NUAGES ********/
-.story #place {
+/* ANIMATION NUAGE */
+#place {
   position: relative;
-  z-index: -1;
+  overflow: hidden;
 }
 
 .story #place > div {
@@ -238,14 +238,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: -100em;
+  margin-left: -95em;
+  margin-top: -3em;
+  z-index: 5;
 }
 
 #place .place--big_cloud,
 #place .place--little_cloud {
   position: absolute;
   filter: blur(12px);
-  z-index: 2;
 }
 
 #place .place--big_cloud {
@@ -257,7 +258,7 @@
 #place .place--little_cloud {
   height: 55px;
   top: 250px;
-  right: 300px;
+  right: 500px;
 }
 
 /************ MEDIA QUERIES BANNER ************/
@@ -295,6 +296,37 @@
     text-align: left;
     font-size: 28px;
   }
+}
+.swiper {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  width: fit-content;
+  text-align: center;
+  font-size: 20px;
+}
+.swiper-slide img {
+  display: block;
+  height: 440px;
+  width: auto;
+}
+
+#characters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#characters .title-bg {
+  background-image: url("/images/orange_characters_bg.png");
+  margin-top: 70px;
 }
 
 /*# sourceMappingURL=theme.css.map */

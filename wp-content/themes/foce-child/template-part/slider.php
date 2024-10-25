@@ -1,20 +1,35 @@
-  <!-- <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-    slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-    coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-    </swiper-slide>
-  </swiper-container> -->
+
+  <?php
+  $args = array(
+    'post_type' => 'characters',
+    'posts_per_page' => -1,
+    'meta_key'  => '_main_char_field',
+    'orderby'   => 'meta_value_num',
+  );
+  $characters_query = new WP_Query($args);
+?>
+
+<h3 class="title-bg">
+  <div class="titles-page section-titre ">Les personnages</div>
+</h3>
+<div class="swiper">
   
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <?php
+    while ( $characters_query->have_posts() ) {
+      $characters_query->the_post(); 
+    ?>
+    <figure class="swiper-slide">
+      <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' )?>">
+      <figcaption>
+        <?php the_title() ?>
+      </figcaption>
+    </figure>
+    <?php
+    }
+    ?>
+  </div>
+
+</div>
