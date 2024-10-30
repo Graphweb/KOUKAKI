@@ -66,15 +66,16 @@
 #studio h2::before,
 #studio h2::after,
 .site-footer::before,
-.site-footer::after {
+.site-footer::after,
+.site-footer ul::after {
   position: absolute;
   animation: rotate 20s linear infinite;
+  transform-origin: center !important;
 }
 
 /* Positionnements spécifiques */
 .story h2::after {
-  left: -6.2em;
-  top: 6em;
+  left: -6.4em;
 }
 
 .story h2::before {
@@ -297,6 +298,7 @@
     font-size: 28px;
   }
 }
+/************* SLIDER ****************/
 .swiper {
   width: 100%;
   height: 500px;
@@ -308,7 +310,6 @@
   flex-direction: column;
   height: 440px;
   width: fit-content;
-  text-align: center;
   font-size: 20px;
 }
 .swiper-slide img {
@@ -327,6 +328,290 @@
 #characters .title-bg {
   background-image: url("/images/orange_characters_bg.png");
   margin-top: 70px;
+}
+
+.story #characters {
+  margin: 6em;
+  margin-left: -50em;
+}
+
+/* Navigation */
+#masthead #site-navigation #all-header .no-active-ul {
+  display: none;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  max-width: 1440px;
+}
+.site-header .main-navigation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  height: 80px;
+}
+.site-header .main-navigation a:hover {
+  color: #111;
+}
+.site-header .main-navigation .site-title {
+  position: relative;
+  align-self: center;
+  justify-self: flex-start;
+  overflow: visible;
+  font-size: clamp(1.125rem, 1.0536rem + 0.3571vw, 1.375rem);
+}
+.site-header .main-navigation .all-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+}
+.site-header .main-navigation .all-head .site-title {
+  position: relative;
+  align-self: center;
+  justify-self: flex-start;
+  overflow: visible;
+}
+.site-header .main-navigation .all-head .site-title-active {
+  bottom: 55px;
+}
+.site-header .main-navigation .all-head .logo-koukaki-burg {
+  display: none;
+  align-self: center;
+}
+.site-header .main-navigation .all-head .logo-koukaki-burg-active {
+  display: block;
+}
+.site-header .main-navigation .all-head ul {
+  position: absolute;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  bottom: 12vh;
+  gap: 25px;
+  padding: 0;
+}
+.site-header .main-navigation .all-head ul .nav-anchor {
+  align-self: center;
+  font-size: clamp(2rem, 1.5714rem + 2.1429vw, 3.5rem);
+  overflow: hidden;
+  z-index: 3;
+}
+.site-header .main-navigation .all-head ul .nav-anchor:hover {
+  text-shadow: 1px 1px 14px #FF5C00;
+}
+.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-1 {
+  animation-name: titre-opacity, titre-apparition;
+  animation-duration: 350ms, 1000ms;
+  animation-iteration-count: 1, 1;
+  animation-timing-function: ease, ease;
+  animation-delay: 0ms, 300ms;
+}
+.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-2 {
+  animation-name: titre-opacity, titre-apparition;
+  animation-duration: 550ms, 1000ms;
+  animation-iteration-count: 1, 1;
+  animation-timing-function: ease, ease;
+  animation-delay: 0ms, 500ms;
+}
+.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-3 {
+  animation-name: titre-opacity, titre-apparition;
+  animation-duration: 850ms, 1000ms;
+  animation-iteration-count: 1, 1;
+  animation-timing-function: ease, ease;
+  animation-delay: 0ms, 800ms;
+}
+.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-4 {
+  animation-name: titre-opacity, titre-apparition;
+  animation-duration: 1150ms, 1000ms;
+  animation-iteration-count: 1, 1;
+  animation-timing-function: ease, ease;
+  animation-delay: 0ms, 1100ms;
+}
+.site-header .main-navigation .all-head .foot-burg {
+  position: relative;
+  text-transform: uppercase;
+  align-self: center;
+  top: 65vh;
+}
+.site-header .main-navigation .all-head .img-burg-all {
+  display: none;
+  position: absolute;
+  z-index: 5;
+}
+.site-header .main-navigation .all-head .img-burg-all img {
+  position: absolute;
+  align-self: center;
+}
+.site-header .main-navigation .all-head .img-burg-all .hibiscus-burg {
+  top: 510px;
+  left: 1112px;
+  position: absolute;
+  animation: rotate 20s linear infinite;
+}
+.site-header .main-navigation .all-head .img-burg-all .flower-random-burg {
+  scale: 0.4;
+  top: 230px;
+  left: 1335px;
+  position: absolute;
+  animation: rotate 20s linear infinite;
+}
+.site-header .main-navigation .all-head .img-burg-all .sunflower-burg {
+  top: 80px;
+  left: 1050px;
+  position: absolute;
+  animation: rotate 20s linear infinite;
+}
+.site-header .main-navigation .all-head .img-burg-all .orchid-burg {
+  top: 50px;
+  left: -59px;
+  position: absolute;
+  animation: rotate 20s linear infinite;
+}
+.site-header .main-navigation .all-head .img-burg-all .flower-simple-burg {
+  top: 360px;
+  left: 200px;
+  position: absolute;
+  animation: rotate 20s linear infinite;
+}
+.site-header .main-navigation .all-head .img-burg-all .cat-1-burg {
+  top: 130px;
+  left: 280px;
+  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+}
+.site-header .main-navigation .all-head .img-burg-all .cat-2-burg {
+  top: 360px;
+  left: 1080px;
+  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+}
+.site-header .main-navigation .all-head .img-burg-all .cat-3-burg {
+  top: 600px;
+  left: 80px;
+  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+}
+.site-header .main-navigation .all-head .img-burg-active {
+  display: contents;
+}
+.site-header .main-navigation .open-btn {
+  z-index: 5;
+  position: absolute;
+  right: 5vw;
+  font-size: 36px;
+}
+.site-header .main-navigation .open-btn:hover {
+  cursor: pointer;
+}
+.site-header .main-navigation .open-btn .burger-icon span {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+}
+.site-header .main-navigation .close-btn {
+  z-index: 5;
+  display: none;
+  position: absolute;
+  right: 5vw;
+  font-size: 36px;
+}
+.site-header .main-navigation .close-btn:hover {
+  cursor: pointer;
+}
+.site-header .main-navigation .close-btn .burger-icon span {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+}
+.site-header .main-navigation .open-close {
+  display: block;
+}
+.site-header .main-navigation .open-close .burger-icon #span-4 {
+  animation: anim-burger-1 2s 1 ease;
+  animation-fill-mode: forwards;
+}
+.site-header .main-navigation .open-close .burger-icon #span-5 {
+  animation: anim-burger-5 1500ms 1 linear;
+  animation-fill-mode: forwards;
+}
+.site-header .main-navigation .open-close .burger-icon #span-6 {
+  animation: anim-burger-2 2s 1 ease;
+  animation-fill-mode: forwards;
+}
+.site-header .main-navigation .close-open {
+  display: none;
+}
+.site-header .main-navigation .open-open .burger-icon #span-1 {
+  animation: anim-burger-3 2s 1 ease;
+  animation-fill-mode: forwards;
+}
+.site-header .main-navigation .open-open .burger-icon #span-2 {
+  animation: anim-burger-6 1500ms 1 linear;
+  animation-fill-mode: forwards;
+}
+.site-header .main-navigation .open-open .burger-icon #span-3 {
+  animation: anim-burger-4 2s 1 ease;
+  animation-fill-mode: forwards;
+}
+.site-header .main-navigation .active-nav {
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: #FFF5E9;
+  animation: fade-in-down 1500ms;
+}
+.site-header .main-navigation .no-active-nav {
+  z-index: -1;
+  top: 80px;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: #FFF5E9;
+  animation: fade-in-up-burg 1500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim-burger-1 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform-origin: 0% 50%;
+    transform: rotate(27deg);
+  }
+}
+@keyframes anim-burger-2 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform-origin: 0% 50%;
+    transform: rotate(-27deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */

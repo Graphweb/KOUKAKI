@@ -20,9 +20,15 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            
-             <!-- 'Characters' déplacé dans template-part slider.php -->
+            <article id="characters">
+                        <h3 class="title-bg">
+                            <div class="section-titre">Les personnages</div>
+                        </h3>
+            </article>
+                    <!-- 'Characters' déplacé dans template-part slider.php -->
                 <?php get_template_part ( 'template-part/slider' ); ?>
+            
+             
             <article id="place">
                 <!-- LIGNE(S) AJOUTEE(S) -->
                 <img src="<?php echo get_theme_file_uri() . '/images/Studio_Koukaki-image_place.png'; ?>" />

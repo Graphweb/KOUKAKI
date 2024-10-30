@@ -9,9 +9,7 @@
   $characters_query = new WP_Query($args);
 ?>
 
-<h3 class="title-bg">
-  <div class="titles-page section-titre ">Les personnages</div>
-</h3>
+
 <div class="swiper">
   
   <!-- Additional required wrapper -->
