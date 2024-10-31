@@ -1,0 +1,27 @@
+/******************** NOUVELLE SECTION *******************/
+.nomination {
+    position: relative;
+    padding: 150px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nominationoscars {
+    position: relative;
+  }
+  
+  .nominationoscars img {
+    height: 100%;
+  }
+  
+  .nomination__oscars h3 {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    line-height: 3.2rem;
+    text-align: left;
+    font-size: 38px;
+  }

@@ -34,7 +34,7 @@
             <div id="all-header" class="all-head">
                 <img id="logo-kou-burg" class="logo-koukaki-burg" src="<?php echo get_stylesheet_directory_uri() . '/images/Image-logo-en-paralax.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
                 <ul id="ul-nav">
-                    <li class="nav-anchor"><a href="#story1" class="a-no-active a-active-1">Histoire</a></li>
+                    <li class="nav-anchor title-bg"><a href="#story1" class="a-no-active a-active-1">Histoire</a></li>
                     <li class="nav-anchor"><a href="#characters" class="a-no-active a-active-2">Personnages</a></li>
                     <li class="nav-anchor"><a href="#place" class="a-no-active a-active-3">Lieu</a></li>
                     <li class="nav-anchor"><a href="#studio" class="a-no-active a-active-4">Studio Koukaki</a></li>

@@ -1,0 +1,11 @@
+/************** Application de l'animation de rotation ****************/
+.story__article::after,
+.story h2::after,
+#studio h2::before,
+#studio h2::after,
+.site-footer::before,
+.site-footer::after,
+.site-footer ul::after {
+  position: absolute;
+  animation: rotate 20s linear infinite;
+}

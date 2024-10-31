@@ -1,0 +1,35 @@
+/* ANIMATION NUAGE */
+
+#place {
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  .story #place > div {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: -95em;
+    margin-top: -3em;
+    z-index: 5;
+  }
+  
+  #place .place--big_cloud,
+  #place .place--little_cloud {
+    position: absolute;
+    filter: blur(12px);
+  }
+  
+  #place .place--big_cloud {
+    height: 122px;
+    top: 70px;
+    right: 90px;
+  }
+  
+  #place .place--little_cloud {
+    height: 55px;
+    top: 250px;
+    right: 500px;
+  }

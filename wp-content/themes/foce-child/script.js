@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('load', checkVisibility); // Vérifier au chargement initial
 });
 
-/* ANIMATION DES NUAGES */
+/********************  ANIMATION DES NUAGES **********************/
 
 document.addEventListener("DOMContentLoaded", () => {
     // Sélectionner les nuages et la section "Le Lieu"
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const sectionScrollRatio = scrollInSection / sectionHeight;
 
             // Ajuster les déplacements pour que les nuages atteignent le bord gauche (limite plus élevée)
-            const moveBigCloud = Math.min(sectionScrollRatio * 380, 380); // Ajusté à 300px maximum pour un mouvement plus lent
-            const moveLittleCloud = Math.min(sectionScrollRatio * 460, 460); // Ajusté à 500px maximum pour un déplacement plus visible
+            const moveBigCloud = Math.min(sectionScrollRatio * 380, 380); 
+            const moveLittleCloud = Math.min(sectionScrollRatio * 460, 460); 
 
             // Appliquer la transformation pour déplacer les nuages
             bigCloud.style.transform = `translateX(-${moveBigCloud}px)`;

@@ -1,0 +1,67 @@
+/************ MEDIA QUERIES BANNER ************/
+
+@media screen and (max-width: 768px) {
+    .banner__video {
+      display: none;
+    }
+    .banner__background {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .banner {
+      height: 600px;
+    }
+    .banner__background {
+      min-width: 1200px;
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    .banner {
+      height: 400px;
+    }
+    .banner__background {
+      min-width: 900px;
+      opacity: 1;
+    }
+    .nomination__oscars h3 {
+      position: absolute;
+      top: 43%;
+      transform: translateY(-50%);
+      line-height: 3.2rem;
+      text-align: left;
+      font-size: 28px;
+  }
+  }
+
+  /*************** MEDIA QUERIES SWIPER ****************/
+
+@media screen and (max-width: 580px) {
+
+    .story #characters h3 {
+        position: absolute;
+        margin-top: 0;
+        margin-bottom: -2em;
+        left: 1.5em;
+    }
+
+    .swiper-slide img {
+        height: 300px;
+    }
+
+    .story #place h3 {
+        position: absolute;
+        left: 0;
+        top: 3em;
+    }
+
+    .story #place > div p {
+        position: absolute;
+        left: 0;
+        top: 20em;
+    }
+}

@@ -1,0 +1,27 @@
+/**************** ANIMATION SECTION *****************/
+
+/* Réinitialisation de l'état initial */
+.section {
+    opacity: 0; /* Masqué par défaut */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  /* Pour les titres de section */
+  .section-titre {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  /* Application d'animation via des classes */
+  .section-visible-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .section-visible-down {
+    animation: fade-in-down 0.8s ease-out forwards;
+  }
+  
+  .titre-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
