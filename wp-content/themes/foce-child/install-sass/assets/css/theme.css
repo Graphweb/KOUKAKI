@@ -11,6 +11,17 @@
   animation: rotate 20s linear infinite;
 }
 
+/* Positionnements spécifiques */
+#studio h2::before {
+  left: 0.2em;
+  top: 0;
+}
+
+#studio h2::after {
+  right: 1em;
+  top: 1.2em;
+}
+
 /* ANIMATION NUAGE */
 #place {
   position: relative;
@@ -486,28 +497,58 @@
     transform: rotate(360deg);
   }
 }
-/************ MEDIA QUERIES BANNER ************/
+/************ MEDIA QUERIES TABLETTE ************/
 @media screen and (max-width: 768px) {
-  .banner__video {
-    display: none;
-  }
   .banner__background {
     display: block;
     width: 100%;
   }
-}
-@media screen and (max-width: 700px) {
-  .banner {
-    height: 600px;
+  .story #characters h3 {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: -2em;
+    left: 1.5em;
   }
-  .banner__background {
-    min-width: 1200px;
-    opacity: 1;
+  #place .place--little_cloud {
+    height: 55px;
+    top: 190px;
+    right: -200px;
+  }
+  #place .place--big_cloud {
+    height: 122px;
+    top: 70px;
+    right: -350px;
+  }
+  .story #place > div {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: -52em;
+    margin-top: 12em;
+    z-index: 5;
+  }
+  #studio h2::before {
+    left: -1.8em;
+    top: 0;
+  }
+  .nomination__oscars h3 {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    line-height: 3.2rem;
+    text-align: left;
+    font-size: 38px;
   }
 }
+/************ MEDIA QUERIES TELEPHONE ************/
 @media screen and (max-width: 580px) {
   .banner {
     height: 400px;
+  }
+  .banner__video {
+    display: none;
   }
   .banner__background {
     min-width: 900px;
@@ -521,9 +562,6 @@
     text-align: left;
     font-size: 28px;
   }
-}
-/*************** MEDIA QUERIES SWIPER ****************/
-@media screen and (max-width: 580px) {
   .story #characters h3 {
     position: absolute;
     margin-top: 0;
@@ -542,6 +580,16 @@
     position: absolute;
     left: 0;
     top: 20em;
+  }
+  #place .place--little_cloud {
+    height: 55px;
+    top: 190px;
+    right: -200px;
+  }
+  #place .place--big_cloud {
+    height: 122px;
+    top: 70px;
+    right: -350px;
   }
 }
 /******************** NOUVELLE SECTION *******************/
