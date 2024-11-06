@@ -4,8 +4,8 @@
 .story h2::after,
 #studio h2::before,
 #studio h2::after,
-.site-footer::before,
-.site-footer::after,
+.nomination_1,
+.nomination_2,
 .site-footer ul::after {
   position: absolute;
   animation: rotate 20s linear infinite;
@@ -13,7 +13,7 @@
 
 /* Positionnements spécifiques */
 #studio h2::before {
-  left: 0.2em;
+  left: -90px;
   top: 0;
 }
 
@@ -94,6 +94,10 @@
 .section-titre.titre-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#studio {
+  overflow: hidden;
 }
 
 /************ BANNER  *************/
@@ -194,7 +198,6 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  bottom: 12vh;
   gap: 25px;
   padding: 0;
 }
@@ -206,34 +209,6 @@
 }
 .site-header .main-navigation .all-head ul .nav-anchor:hover {
   text-shadow: 1px 1px 14px #FF5C00;
-}
-.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-1 {
-  animation-name: titre-opacity, titre-apparition;
-  animation-duration: 350ms, 1000ms;
-  animation-iteration-count: 1, 1;
-  animation-timing-function: ease, ease;
-  animation-delay: 0ms, 300ms;
-}
-.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-2 {
-  animation-name: titre-opacity, titre-apparition;
-  animation-duration: 550ms, 1000ms;
-  animation-iteration-count: 1, 1;
-  animation-timing-function: ease, ease;
-  animation-delay: 0ms, 500ms;
-}
-.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-3 {
-  animation-name: titre-opacity, titre-apparition;
-  animation-duration: 850ms, 1000ms;
-  animation-iteration-count: 1, 1;
-  animation-timing-function: ease, ease;
-  animation-delay: 0ms, 800ms;
-}
-.site-header .main-navigation .all-head ul .nav-anchor .a-appearance-4 {
-  animation-name: titre-opacity, titre-apparition;
-  animation-duration: 1150ms, 1000ms;
-  animation-iteration-count: 1, 1;
-  animation-timing-function: ease, ease;
-  animation-delay: 0ms, 1100ms;
 }
 .site-header .main-navigation .all-head .foot-burg {
   position: relative;
@@ -551,7 +526,6 @@
     display: none;
   }
   .banner__background {
-    min-width: 900px;
     opacity: 1;
   }
   .nomination__oscars h3 {
@@ -601,6 +575,7 @@
   gap: 40px 0;
   justify-content: center;
   align-items: center;
+  margin-top: -100px;
 }
 
 .nominationoscars {
@@ -620,6 +595,35 @@
   font-size: 38px;
 }
 
+/* Suppression des fleurs du pieds de page pour le déplacer dans la nouvelle section- */
+.fleurs {
+  overflow: hidden; /* Masque ce qui dépasse */
+  padding: 20px;
+}
+
+.nomination_1 {
+  position: relative;
+  width: 200px;
+  right: -1300px;
+}
+
+.nomination_2 {
+  margin: -90px;
+  left: 390px;
+}
+
+.site-footer::before {
+  content: "";
+}
+
+.site-footer::after {
+  content: "";
+}
+
+#place h3 {
+  width: 60%;
+}
+
 /************* SLIDER ****************/
 .swiper {
   width: 100%;
@@ -636,7 +640,7 @@
 }
 .swiper-slide img {
   display: block;
-  height: 440px;
+  height: 300px;
   width: auto;
 }
 

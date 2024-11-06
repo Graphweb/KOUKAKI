@@ -7,6 +7,8 @@
     gap: 40px 0;
     justify-content: center;
     align-items: center;
+    margin-top: -100px;
+    
   }
   
   .nominationoscars {
@@ -25,3 +27,33 @@
     text-align: left;
     font-size: 38px;
   }
+  /* Suppression des fleurs du pieds de page pour le déplacer dans la nouvelle section- */
+  .fleurs {
+    overflow: hidden; /* Masque ce qui dépasse */ 
+    padding: 20px;
+  }
+  .nomination_1 {
+    position: relative;
+    width: 200px; 
+    right: -1300px;
+    // transform-origin: center !important;
+  }
+  
+  .nomination_2 {
+    margin: -90px;
+    left: 390px;
+   
+}
+  
+   .site-footer::before {
+     content: '';
+   }
+  
+   .site-footer::after {
+     content: '';
+   }
+  
+   #place h3 {
+     width: 60%;
+    }
+

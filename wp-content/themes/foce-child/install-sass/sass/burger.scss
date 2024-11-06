@@ -73,7 +73,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-self: center;
-                bottom: 12vh;
+                // bottom: 12vh;
                 gap: 25px;
                 padding: 0;
   
@@ -86,41 +86,9 @@
                     &:hover {
                         text-shadow: 1px 1px 14px #FF5C00;
                     }
-  
-                    .a-appearance-1 {
-                        animation-name: titre-opacity, titre-apparition;
-                        animation-duration: 350ms, 1000ms;
-                        animation-iteration-count: 1, 1;
-                        animation-timing-function: ease, ease;
-                        animation-delay: 0ms, 300ms;
-                    }
-  
-                    .a-appearance-2 {
-                        animation-name: titre-opacity, titre-apparition;
-                        animation-duration: 550ms, 1000ms;
-                        animation-iteration-count: 1, 1;
-                        animation-timing-function: ease, ease;
-                        animation-delay: 0ms, 500ms;
-                    }
-  
-                    .a-appearance-3 {
-                        animation-name: titre-opacity, titre-apparition;
-                        animation-duration: 850ms, 1000ms;
-                        animation-iteration-count: 1, 1;
-                        animation-timing-function: ease, ease;
-                        animation-delay: 0ms, 800ms;
-                    }
-  
-                    .a-appearance-4 {
-                        animation-name: titre-opacity, titre-apparition;
-                        animation-duration: 1150ms, 1000ms;
-                        animation-iteration-count: 1, 1;
-                        animation-timing-function: ease, ease;
-                        animation-delay: 0ms, 1100ms;
-                    }
-                }
+
             }
-           
+        }
   
             .foot-burg {
                 position: relative;
@@ -304,3 +272,4 @@
         }
     }
   }
+  

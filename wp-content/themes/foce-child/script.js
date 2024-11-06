@@ -128,11 +128,6 @@ function openNav() {
   siteTitle.classList.add("site-title-active");
   siteLogo.classList.add("logo-koukaki-burg-active");
   imgBurg.classList.add("img-burg-active");
-  fadeTitles1.classList.add("a-appearance-1");
-  fadeTitles2.classList.add("a-appearance-2");
-  fadeTitles3.classList.add("a-appearance-3");
-  fadeTitles4.classList.add("a-appearance-4");
-  noScroll.classList.add("no-scroll");
   noFlower.classList.add("opacity-nav");
   noSwiper.classList.add("opacity-nav");
 
@@ -152,10 +147,6 @@ function closeNav() {
   siteTitle.classList.remove("site-title-active");
   siteLogo.classList.remove("logo-koukaki-burg-active");
   imgBurg.classList.remove("img-burg-active");
-  fadeTitles1.classList.remove("a-appearance-1");
-  fadeTitles2.classList.remove("a-appearance-2");
-  fadeTitles3.classList.remove("a-appearance-3");
-  fadeTitles4.classList.remove("a-appearance-4");
   noFlower.classList.remove("opacity-nav");
   noSwiper.classList.remove("opacity-nav");
 
