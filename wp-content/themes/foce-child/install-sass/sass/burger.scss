@@ -44,15 +44,6 @@
             flex-direction: column;
             overflow: hidden;
             position: absolute;
-  
-  
-            .site-title {
-                position: relative;
-                align-self: center;
-                justify-self: flex-start;
-                overflow: visible;
-            }
-  
             .site-title-active {
                 bottom: 55px;
             }
@@ -64,6 +55,7 @@
   
             .logo-koukaki-burg-active {
                 display: block;
+                margin: 40px;
             }
   
             ul {
@@ -75,8 +67,7 @@
                 align-self: center;
                 // bottom: 12vh;
                 gap: 25px;
-                padding: 0;
-  
+                
                 .nav-anchor {
                     align-self: center;
                     font-size: clamp(2rem, 1.5714rem + 2.1429vw, 3.5rem);
@@ -95,6 +86,7 @@
                 text-transform: uppercase;
                 align-self: center;
                 top: 65vh;
+                padding-top: -40px;
             }
   
             .img-burg-all {
@@ -147,19 +139,19 @@
                 .cat-1-burg {
                     top: 130px;
                     left: 280px;
-                    animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+                    animation: float 6s 2s infinite ease-in-out;
                 }
   
                 .cat-2-burg {
                     top: 360px;
                     left: 1080px;
-                    animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+                    animation: float 6s 2s infinite ease-in-out;
                 }
   
                 .cat-3-burg {
                     top: 600px;
                     left: 80px;
-                    animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+                    animation: float 6s 2s infinite ease-in-out;
                 }
             }
   
@@ -273,3 +265,53 @@
     }
   }
   
+/* Style initial du menu pour qu'il démarre en bas avec opacité 0 */
+#ul-nav {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    max-height: 0;
+    overflow: hidden; 
+}
+
+/* Animation de fondu et montée lorsque le menu est visible */
+#ul-nav.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px; 
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Transition pour chaque lien avec des délais croissants */
+#ul-nav li {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Transition avec délai pour chaque lien lors de l'affichage */
+#ul-nav.show li {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Appliquez un délai spécifique pour chaque lien */
+#ul-nav.show li:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+#ul-nav.show li:nth-child(2) {
+    transition-delay: 0.8s;
+}
+
+#ul-nav.show li:nth-child(3) {
+    transition-delay: 1.2s;
+}
+
+#ul-nav.show li:nth-child(4) {
+    transition-delay: 1.6s;
+}
+
+
+
+

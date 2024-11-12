@@ -5,8 +5,8 @@
             </div>
         </section> 
         <div class="nomination_2">
-                 <img src="wp-content\themes\foce-child\images\Sunflower.png">
-            </div>
+            <img src="wp-content\themes\foce-child\images\Sunflower.png">
+        </div>
 <!-- /* NOUVELLE SECTION NOMINATION */ -->
         <section class=" section nomination">
                 <div class="nomination__oscars">

@@ -1,4 +1,4 @@
-/************ MEDIA QUERIES TABLETTE ************/
+/************ MEDIA QUERIES TABLETTE ************
 
 @media screen and (max-width: 768px) {
     
@@ -50,7 +50,12 @@
 
   @media screen and (max-width: 580px) {
     .banner {
-      height: 400px;
+      height: 300px;
+        min-height: 100px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .banner__video {
       display: none;
@@ -59,14 +64,7 @@
       // min-width: 900px;
       opacity: 1;
     }
-    .nomination__oscars h3 {
-      position: absolute;
-      top: 43%;
-      transform: translateY(-50%);
-      line-height: 3.2rem;
-      text-align: left;
-      font-size: 28px;
-  }
+  
 
     .story #characters h3 {
         position: absolute;
@@ -76,7 +74,7 @@
     }
 
     .swiper-slide img {
-        height: 300px;
+        height: 100px;
     }
 
     .story #place h3 {
@@ -101,6 +99,18 @@
     top: 70px;
     right: -350px;
   }
+  .nomination__oscars h3 {
+    position: absolute;
+    top: 44%;
+    transform: translateY(-50%);
+    line-height: 3.2rem;
+    text-align: left;
+    /* font-size: 38px;*/
+ }
+ .nomination_2 {
+  margin: -180px;
+  left: 370px;
+}
 }
 
 

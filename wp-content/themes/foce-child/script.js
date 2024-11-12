@@ -169,3 +169,15 @@ document.addEventListener("DOMContentLoaded", function() {
     anchor.addEventListener("click", closeNav);
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("openBtn");
+  const navMenu = document.getElementById("ul-nav");
+
+  // Bascule l'affichage avec effet de fondu depuis le bas
+  toggleBtn.addEventListener("click", function () {
+      navMenu.classList.toggle("show"); // Ajoute ou retire la classe show
+  });
+});

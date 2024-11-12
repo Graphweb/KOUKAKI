@@ -175,12 +175,6 @@
   overflow: hidden;
   position: absolute;
 }
-.site-header .main-navigation .all-head .site-title {
-  position: relative;
-  align-self: center;
-  justify-self: flex-start;
-  overflow: visible;
-}
 .site-header .main-navigation .all-head .site-title-active {
   bottom: 55px;
 }
@@ -190,6 +184,7 @@
 }
 .site-header .main-navigation .all-head .logo-koukaki-burg-active {
   display: block;
+  margin: 40px;
 }
 .site-header .main-navigation .all-head ul {
   position: absolute;
@@ -199,7 +194,6 @@
   justify-content: center;
   align-self: center;
   gap: 25px;
-  padding: 0;
 }
 .site-header .main-navigation .all-head ul .nav-anchor {
   align-self: center;
@@ -215,6 +209,7 @@
   text-transform: uppercase;
   align-self: center;
   top: 65vh;
+  padding-top: -40px;
 }
 .site-header .main-navigation .all-head .img-burg-all {
   display: none;
@@ -259,17 +254,17 @@
 .site-header .main-navigation .all-head .img-burg-all .cat-1-burg {
   top: 130px;
   left: 280px;
-  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+  animation: float 6s 2s infinite ease-in-out;
 }
 .site-header .main-navigation .all-head .img-burg-all .cat-2-burg {
   top: 360px;
   left: 1080px;
-  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+  animation: float 6s 2s infinite ease-in-out;
 }
 .site-header .main-navigation .all-head .img-burg-all .cat-3-burg {
   top: 600px;
   left: 80px;
-  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
+  animation: float 6s 2s infinite ease-in-out;
 }
 .site-header .main-navigation .all-head .img-burg-active {
   display: contents;
@@ -356,6 +351,53 @@
   background-color: #FFF5E9;
   animation: fade-in-up-burg 1500ms;
   animation-fill-mode: forwards;
+}
+
+/* Style initial du menu pour qu'il démarre en bas avec opacité 0 */
+#ul-nav {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Animation de fondu et montée lorsque le menu est visible */
+#ul-nav.show {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Transition pour chaque lien avec des délais croissants */
+#ul-nav li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Transition avec délai pour chaque lien lors de l'affichage */
+#ul-nav.show li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Appliquez un délai spécifique pour chaque lien */
+#ul-nav.show li:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+#ul-nav.show li:nth-child(2) {
+  transition-delay: 0.8s;
+}
+
+#ul-nav.show li:nth-child(3) {
+  transition-delay: 1.2s;
+}
+
+#ul-nav.show li:nth-child(4) {
+  transition-delay: 1.6s;
 }
 
 /************** ANIMATION SECTION *****************/
@@ -472,69 +514,69 @@
     transform: rotate(360deg);
   }
 }
-/************ MEDIA QUERIES TABLETTE ************/
+/************ MEDIA QUERIES TABLETTE ************
+
 @media screen and (max-width: 768px) {
-  .banner__background {
-    display: block;
-    width: 100%;
-  }
-  .story #characters h3 {
-    position: absolute;
-    margin-top: 0;
-    margin-bottom: -2em;
-    left: 1.5em;
-  }
-  #place .place--little_cloud {
-    height: 55px;
-    top: 190px;
-    right: -200px;
-  }
-  #place .place--big_cloud {
-    height: 122px;
-    top: 70px;
-    right: -350px;
-  }
-  .story #place > div {
-    max-width: 580px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: -52em;
-    margin-top: 12em;
-    z-index: 5;
-  }
-  #studio h2::before {
-    left: -1.8em;
-    top: 0;
-  }
-  .nomination__oscars h3 {
+
+    .banner__background {
+      display: block;
+      width: 100%;
+    }
+    .story #characters h3 {
+      position: absolute;
+      margin-top: 0;
+      margin-bottom: -2em;
+      left: 1.5em;
+    }
+    #place .place--little_cloud {
+      height: 55px;
+      top: 190px;
+      right: -200px;
+    }
+    #place .place--big_cloud {
+      height: 122px;
+      top: 70px;
+      right: -350px;
+    }
+    .story #place > div {
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: -52em;
+      margin-top: 12em;
+      z-index: 5;
+    }
+    #studio h2::before {
+      left: -1.8em;
+     top: 0;
+   }
+   .nomination__oscars h3 {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
     line-height: 3.2rem;
     text-align: left;
     font-size: 38px;
-  }
 }
-/************ MEDIA QUERIES TELEPHONE ************/
+}
+
+  /************ MEDIA QUERIES TELEPHONE ************/
 @media screen and (max-width: 580px) {
   .banner {
-    height: 400px;
+    height: 300px;
+    min-height: 100px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .banner__video {
     display: none;
   }
   .banner__background {
     opacity: 1;
-  }
-  .nomination__oscars h3 {
-    position: absolute;
-    top: 43%;
-    transform: translateY(-50%);
-    line-height: 3.2rem;
-    text-align: left;
-    font-size: 28px;
   }
   .story #characters h3 {
     position: absolute;
@@ -543,7 +585,7 @@
     left: 1.5em;
   }
   .swiper-slide img {
-    height: 300px;
+    height: 100px;
   }
   .story #place h3 {
     position: absolute;
@@ -564,6 +606,18 @@
     height: 122px;
     top: 70px;
     right: -350px;
+  }
+  .nomination__oscars h3 {
+    position: absolute;
+    top: 44%;
+    transform: translateY(-50%);
+    line-height: 3.2rem;
+    text-align: left;
+    /* font-size: 38px;*/
+  }
+  .nomination_2 {
+    margin: -180px;
+    left: 370px;
   }
 }
 /******************** NOUVELLE SECTION *******************/
@@ -612,6 +666,7 @@
   left: 390px;
 }
 
+/* fait disparaitre les fleur */
 .site-footer::before {
   content: "";
 }

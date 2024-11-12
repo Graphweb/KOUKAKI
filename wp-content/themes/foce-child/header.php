@@ -29,7 +29,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation overlay-navigation" class="main-navigation">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="i-site-title" class="site-title" rel="home"><?php bloginfo( 'name' ); ?></a>
             <div id="all-header" class="all-head">
                 <img id="logo-kou-burg" class="logo-koukaki-burg" src="<?php echo get_stylesheet_directory_uri() . '/images/Image-logo-en-paralax.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
@@ -58,6 +58,8 @@
                         <span id="span-3"></span>
                     </span>
                 </div>
+
+
                 <div id="closeBtn" class="close-btn">
                     <span class="burger-icon">
                         <span id="span-4"></span>

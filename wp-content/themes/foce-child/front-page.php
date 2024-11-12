@@ -16,14 +16,14 @@ get_header();
     </section>
     <!-- /************************************************ */ -->
         <section id="#story" class="story section">
-            <h2 class="title-bg">
+            <h2>
                 <div class="section-titre">L'histoire</div>
             </h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <article id="characters">
-                        <h3 class="title-bg">
+                        <h3>
                             <div class="section-titre">Les personnages</div>
                         </h3>
             </article>
@@ -38,7 +38,7 @@ get_header();
                 <img class="place--little_cloud" src="<?php echo get_theme_file_uri() . '/images/little_cloud.png'; ?>" alt="Petit nuage qui passe">
                 <!-- =================== -->
                 <div>
-                <h3><span class="place__title hidden title-bg">
+                <h3><span class="place__title hidden">
                 <div class="section-titre">Le Lieu</div>
                 </span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
@@ -46,7 +46,7 @@ get_header();
             </article>
         </section>
         <section id="studio" class="section">
-            <h2 class="title-bg">
+            <h2>
                 <div class="section-titre">Studio Koukaki</div>
             </h2>
             <div>
