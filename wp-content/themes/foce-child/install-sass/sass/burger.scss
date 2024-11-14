@@ -85,15 +85,13 @@
                 position: relative;
                 text-transform: uppercase;
                 align-self: center;
-                top: 65vh;
+                top: 60vh;
                 padding-top: -40px;
             }
   
             .img-burg-all {
-                display: none;
                 position: absolute;
-                z-index: 5;
-  
+                
                 img {
                     position: absolute;
                     align-self: center;
